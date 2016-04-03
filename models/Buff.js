@@ -1,10 +1,13 @@
 var mongoose = require('mongoose');
 
 var BuffSchema = new mongoose.Schema({
-  name: String,
+  name: {
+	  type:String,
+	unique:true,
+	},
   guild: String,
-  Date: String,
-  Time: String
+  date: String,
+  time: String
 });
 
 module.exports = mongoose.model('Buff', BuffSchema);
